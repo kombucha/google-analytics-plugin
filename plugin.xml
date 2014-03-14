@@ -21,10 +21,17 @@
 		</config-file>
 
 		<header-file src="ios/UniversalAnalyticsPlugin.h" />
-		<source-file src="ios/UniversalAnalyticsPlugin.m" />
-		<framework src="SystemConfiguration.framework" />
-		<framework src="CoreData.framework" />
-		<framework src="AdSupport.framework" />
+        <header-file src="ios/lib/GAI.h" />
+        <header-file src="ios/lib/GAITrackedViewController.h" />
+        <header-file src="ios/lib/GAITracker.h" />
+        <header-file src="ios/lib/GAILogger.h" />
+        <header-file src="ios/lib/GAIFields.h" />
+        <header-file src="ios/lib/GAIDictionaryBuilder.h" />
+        <source-file src="ios/UniversalAnalyticsPlugin.m" />
+        <source-file src="ios/lib/libGoogleAnalyticsServices.a" framework="true" />
+        <framework src="SystemConfiguration.framework" />
+        <framework src="CoreData.framework" />
+        <framework src="AdSupport.framework" />
 		<framework src="libz.dylib" />
 	</platform>
 
@@ -39,5 +46,6 @@
             <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
         </config-file>
 		<source-file src="android/UniversalAnalyticsPlugin.java" target-dir="src/com/danielcwilson/plugins/analytics" />
+        <source-file src="android/lib/libGoogleAnalyticsServices.jar" target-dir="libs/" />
 	</platform>
 </plugin>
